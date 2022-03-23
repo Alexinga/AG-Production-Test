@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Task Six</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+    }
+
+    body {
+        margin: 0 4rem;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .btn {
+        display: block;
+        margin: 3rem auto;
+        border: none;
+        color: black;
+        background: rgb(180, 214, 101);
+        padding: 0.7rem 1.3rem;
+        cursor: pointer;
+        font-weight: bold;
+        transition: all 0.9s;
+    }
+
+    .btn:hover {
+        transform: rotate(360deg);
+    }
+    .heading h4 {
+        font-size: 0.8rem;
+        color: gray;
+        margin: 2rem 0 2rem 0;
+    }
+
+    .heading h1 {
+        font-size: 3rem;
+        margin-bottom: 5rem;
+    }
+    i {
+        font-size: 1.7rem;
+        padding-right: 1rem;
+        color: rgb(180, 214, 101);
+    }
+    .box {
+        line-height: 1.3;
+    }
+    .box a {
+        font-size: 1.7rem;
+        font-weight: bold;
+        color: black;
+    }
+    .box a:hover {
+        border-bottom: 4px solid rgb(180, 214, 101);
+    }
+    .box p {
+        margin-top: 1rem;
+    }
+    @media(max-width: 425px) {
+        .heading h4, .heading h1 {
+            text-align: center;
+        }
+    }
+</style>
+
+<body>
+    <div class="heading">
+        <h4>WORK WITH US</h4>
+        <h1>Need a technology solution? We're here to help.</h1>
+    </div>
+    <div class="grid-container">
+        <div class="box">
+            <i class="fas fa-server"></i>
+            <a class="link" href="#">Custom Software</a>
+            <p>We've been building custom software applications for over a decade, empowering businesses to accomplish
+                mission-critical tasks and helping start-ups bring their ideas to life.</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-comment-alt"></i>
+            <a class="link" href="#">Publishing Systems</a>
+            <p>From Content Management Systems installation and support to Enterprise Content Management System design
+                and implementation, we can help you solve your content publishing needs big or small.</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-shopping-cart"></i>
+            <a class="link" href="#">eCommerce Systems</a>
+            <p>We build eCommerce systems that are flexible, intuitive, beautiful, and mobile-ready. From implementing
+                first or third party platforms to building a custom eCommerce application to spec.</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-mobile"></i>
+            <a class="link" href="#">Mobile Applications</a>
+            <p>Whether it's a native, hybrid, or progressive web application, we can help you determine what option is
+                best for you and ensure that all aspects of your presence are mobile-ready.</p>
+        </div>
+    </div>
+    <button class="btn">Our Solutions</button>
+</body>
+
+</html>

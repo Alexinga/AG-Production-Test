@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Two & Three</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        background: linear-gradient(to left, red, lightgreen);
+        height: 100vh;
+    }
+
+    .btn {
+        color: white;
+        background: red;
+        padding: 1rem;
+        position: absolute;
+        top: 170px;
+        z-index: 1;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 1.2rem;
+    }
+
+    .closeBtn {
+        font-size: 1.4rem;
+        background: red;
+        padding: 0.15rem 0.5rem;
+        color: white;
+        border-radius: 15px;
+        border: none;
+        cursor: pointer;
+    }
+    .container {
+        display: none;
+    }
+    .container.active {
+        position: absolute;
+        top: 250px;
+        background-color: white;
+        padding: 2rem;
+        border-radius: 15px;
+        display: block;
+    }
+</style>
+
+<body>
+    <button class="btn">Click Me</button>
+    <div class="container">
+        <button class="closeBtn">&times;</button>
+        <div class="modal-info">
+            <h1>Hi my name is Alex Inga</h1>
+            <p>It's a pleasure to meet you!</p>
+        </div>
+    </div>
+</body>
+
+<script>
+    'use strict';
+    const showModalBtn = document.querySelector('.btn');
+    const modalContainer = document.querySelector('.container');
+    const closeModalBtn = document.querySelector('.closeBtn');
+
+    function activeModal() {
+        modalContainer.classList.toggle('active');
+    }
+
+    window.addEventListener('keydown', function(e) {
+        if(e.key === 'Escape') {
+            modalContainer.classList.toggle('active');
+        }
+    })
+    showModalBtn.addEventListener('click', activeModal);
+    closeModalBtn.addEventListener('click', activeModal);
+
+</script>
+</html>

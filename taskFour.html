@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Four</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        height: 100vh;
+    }
+
+    input {
+        padding: 0.5rem;
+    }
+
+    .form-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(to left, blue, aqua);
+        width: 50%;
+        padding: 1rem;
+        margin: 0 auto;
+        transform: translate(0%, 50%);
+        border-radius: 15px;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        padding: 0.5rem;
+        font-size: 1.2rem;
+    }
+
+    .checkbox {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        justify-content: center;
+    }
+
+    .btn {
+        margin-top: 0.5rem;
+        background: linear-gradient(to left, lightblue, aqua);
+        padding: 0.25rem 0.5rem;
+        font-size: 0.8rem;
+        border: none;
+        cursor: pointer;
+    }
+    @media(max-width: 395px) {
+        .form-container {
+            width: 100%;
+        }
+    }
+</style>
+
+<body>
+    <form class="form-container">
+        <div class="form-group">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" placeholder="Enter name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" placeholder="Enter email" id="email">
+        </div>
+        <div class="form-group">
+            <label>Please Select Position:</label>
+            <select>
+                <option value="" disabled hidden selected></option>
+                <option value="web designer">Web Designer</option>
+                <option value="web developer">Web Developer</option>
+            </select>
+        </div>
+        <div class="form-group-1">
+            <label>Sign up for our mailing list?</label>
+            <div class="checkbox">
+                <h4>yes</h4>
+                <input type="checkbox">
+                <h4>no</h4>
+                <input type="checkbox">
+            </div>
+        </div>
+        <button type="submit" class="btn">submit</button>
+    </form>
+</body>
+
+</html>
